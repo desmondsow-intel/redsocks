@@ -21,7 +21,7 @@ jobs:
     - name: Build
       run: |
         mkdir release
-        make ENABLE_STATIC=1
+        make ENABLE_STATIC=1 ENABLE_HTTPS_PROXY=true 
         mv redsocks2 release/redsocks2-`arch`-${{github.ref_name}}
     - name: Release
       uses: softprops/action-gh-release@v1
